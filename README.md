@@ -21,7 +21,7 @@ chmod +x define.py
 **Put the file in bin path**
 For example
 ``` 
-mkdir -p ~/.local/bin && mv define.py ~./.local/bin/define
+mkdir -p ~/.local/bin && mv define.py ~./local/bin/define
 ```
 ## Running the code
 ```
