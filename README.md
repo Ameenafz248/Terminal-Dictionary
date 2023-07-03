@@ -1,6 +1,6 @@
 # Terminal-Dictionary
 A simple dictionary that can be used to get definitions for words using linux terminal.
-##Dependencies
+## Dependencies
 - python3
 - requests
 - json
