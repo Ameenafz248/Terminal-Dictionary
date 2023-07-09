@@ -8,12 +8,16 @@ if len(argv) != 2:
     exit()
 word = argv[1]
 url = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
-details = requests.get(url + word)
-if (details.status_code == 404):
-    print("The word was not found")
-    exit()
-if (details.status_code != 200):
-    print("Some error occured. Try again")
+try:
+    details = requests.get(url + word, timeout=10)
+    if (details.status_code == 404):
+        print("The word was not found")
+        exit()
+    if (details.status_code != 200):
+        print("Some error occured. Try again")
+        exit()
+except (requests.ConnectionError, requests.Timeout) as exception:
+    print("Connection error. Please make sure you are connected to internet")
     exit()
 obj = details.json()[0]
 meanings = obj['meanings']
@@ -44,4 +48,3 @@ for x in meanings:
             print("\033[2m" + "    \"{}\"".format(y['example']) + "\033[0m" + "\033[1m")      
         print()
 exit()
-
