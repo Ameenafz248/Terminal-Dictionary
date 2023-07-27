@@ -1,14 +1,14 @@
 # Terminal-Dictionary
 A simple dictionary that can be used to get definitions for words using linux terminal.
 ## Prerequisites
-- python3
+The following Python libraries are required to run the program.
 - requests
 - json
 - textwrap
 
-modules can be install using pip. For example, to install requests
+modules can be install using pip. For example, to install textwrap, use the command:
 ```
-python3 -m pip install requests
+python3 -m pip install textwrap
 ```
 ## Installation
 **Clone the repo** 
